@@ -1,0 +1,149 @@
+body {
+    background-color: #f0f0f0; /* Eliminé el error en "color #f0f0f0;;" */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh; /* Para ocupar toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrar verticalmente */
+    flex-direction: column; /* Apilar elementos verticalmente */
+}
+
+/* Título principal */
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Espaciado con el contenido */
+}
+
+/* Botones */
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Tamaño de texto adecuado */
+}
+button:hover {
+    background-color: #377839;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 20px auto; /* Centrado horizontal */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Entrada de texto */
+input {
+    background-color: rgb(188, 186, 186);
+    border: none;
+    width: calc(100% - 30px); /* Ajustar al contenedor */
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 1rem;
+    box-sizing: border-box; /* Incluir padding en el ancho */
+}
+
+/* Lista de tareas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Elementos de la lista */
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding-left: 20px; /* Agregado un espaciado general desde la izquierda */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: nowrap;
+    padding-right: 20px;
+}
+
+/* Checkbox - separa el checkbox de la pared izquierda por 20px */
+li > .task-checkbox {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* El texto de la tarea se ajusta, pero no se mueve hacia abajo */
+li span {
+    flex-grow: 1;
+    margin-right: 50px;
+    font-size: 1rem;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+li div {
+    display: flex; /* Alinear los botones en línea */
+    gap: 10px; /* Espaciado entre los botones */
+    justify-content: flex-start; /* Alineación de botones a la izquierda */
+    flex-wrap: nowrap; 
+}
+
+
+/* Checkbox */
+.task-checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Botones dentro de las tareas */
+li button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 600px) {
+    li {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+    li span {
+        margin-right: 0;
+        margin-bottom: 10px; /* Espacio inferior entre el texto y los botones */
+    }
+    li div {
+        justify-content: flex-start; /* Alineación de los botones a la izquierda */
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+}
+
+/* Botón de eliminar en color rojo */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+.delete-btn:hover {
+    background-color: #a71d2a;
+}
+
+/* Botón de editar en color azul */
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+}
+.edit-btn:hover {
+    background-color: #0056b3;
+}
